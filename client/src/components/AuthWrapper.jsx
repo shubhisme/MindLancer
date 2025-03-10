@@ -57,10 +57,10 @@ function AuthWrapper({ type }) {
     const blurDiv = document.querySelector("#blur-div");
     html.style.overflowY = "hidden";
     const handleBlurDivClick = () => {
-      // dispatch(closeAuthModal());
+      dispatch(closeAuthModal());
     };
     const handleAuthModalClick = (e) => {
-      // e.stopPropagation();
+      e.stopPropagation();
     };
     authModal?.addEventListener("click", handleAuthModalClick);
     blurDiv?.addEventListener("click", handleBlurDivClick);
