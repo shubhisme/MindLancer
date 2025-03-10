@@ -18,6 +18,8 @@
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "firebase": "^11.4.0",
+    "gsap": "^3.12.7",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "next": "^15.2.1",
     "react": "18.2.0",
     "react-cookie": "^7.2.2",
