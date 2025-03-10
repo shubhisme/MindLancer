@@ -47,9 +47,8 @@ function Navbar() {
   };
 
   const links = [
-    { linkName: "Fiverr Business", handler: "#", type: "link" },
+    { linkName: "Business", handler: "#", type: "link" },
     { linkName: "Explore", handler: "#", type: "link" },
-    { linkName: "English", handler: "#", type: "link" },
     { linkName: "Become a Seller", handler: "#", type: "link" },
     { linkName: "Sign in", handler: handleLogin, type: "button" },
     { linkName: "Join", handler: handleSignup, type: "button2" },
@@ -191,7 +190,7 @@ function Navbar() {
               onChange={(e) => setSearchData(e.target.value)}
             />
             <button
-              className="bg-gray-900 py-1.5 text-white w-16 flex justify-center items-center"
+              className="bg-blue-400 py-1.5 text-white w-16 flex justify-center items-center"
               onClick={() => {
                 setSearchData("");
                 router.push(`/search?q=${searchData}`);
@@ -219,9 +218,9 @@ function Navbar() {
                         onClick={handler}
                         className={`border   text-md font-semibold py-1 px-3 rounded-sm ${
                           navFixed
-                            ? "border-[#1DBF73] text-[#1DBF73]"
+                            ? "border-blue-400 text-blue-400"
                             : "border-white text-white"
-                        } hover:bg-[#1DBF73] hover:text-white hover:border-[#1DBF73] transition-all duration-500`}
+                        } hover:bg-blue-400 hover:text-white hover:border-blue-400 transition-all duration-500`}
                       >
                         {linkName}
                       </button>
