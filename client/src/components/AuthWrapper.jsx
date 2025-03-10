@@ -3,7 +3,8 @@ import { LOGIN_ROUTE, SIGNUP_ROUTE } from "../utils/constants";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { MdFacebook } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { useStateProvider } from "../context/StateContext";
 import { reducerCases } from "../context/constants";
@@ -85,13 +86,17 @@ function AuthWrapper({ type }) {
         >
           <div className="flex flex-col justify-center items-center p-8 gap-7">
             <h3 className="text-2xl font-semibold text-slate-700">
-              {type === "login" ? "Login" : "Sign"}
-              in to Fiverr
+              {type === "login" ? "Log in " : "Sign up "}
+              to MindLancer
             </h3>
             <div className="flex flex-col gap-5">
+              <button className="text-white bg-gray-500 p-3 font-semibold w-80 flex items-center justify-center relative">
+                <FaGithub className="absolute left-4 text-2xl" />
+                Continue with GitHub
+              </button>
               <button className="text-white bg-blue-500 p-3 font-semibold w-80 flex items-center justify-center relative">
-                <MdFacebook className="absolute left-4 text-2xl" />
-                Continue with Facebook
+                <FaLinkedin className="absolute left-4 text-2xl" />
+                Continue with LinkedIn
               </button>
               <button className="border border-slate-300 p-3 font-medium w-80 flex items-center justify-center relative">
                 <FcGoogle className="absolute left-4 text-2xl" />
@@ -119,7 +124,7 @@ function AuthWrapper({ type }) {
                 onChange={handleChange}
               />
               <button
-                className="bg-[#1DBF73] text-white px-12 text-lg font-semibold rounded-r-md p-3 w-80"
+                className="bg-blue-400 text-white px-12 text-lg font-semibold rounded-r-md p-3 w-80 hover:bg-amber-300 transition-all"
                 onClick={handleClick}
                 type="button"
               >
@@ -134,7 +139,7 @@ function AuthWrapper({ type }) {
                 <>
                   Not a member yet?&nbsp;
                   <span
-                    className="text-[#1DBF73] cursor-pointer"
+                    className="text-blue-400 cursor-pointer"
                     onClick={() => {
                       dispatch({
                         type: reducerCases.TOGGLE_SIGNUP_MODAL,
@@ -153,7 +158,7 @@ function AuthWrapper({ type }) {
                 <>
                   Already a member?&nbsp;
                   <span
-                    className="text-[#1DBF73] cursor-pointer"
+                    className="text-blue-400 cursor-pointer"
                     onClick={() => {
                       dispatch({
                         type: reducerCases.TOGGLE_SIGNUP_MODAL,

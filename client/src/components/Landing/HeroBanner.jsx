@@ -16,7 +16,8 @@ function HomeBanner() {
 
   return (
     <div className="h-[680px] relative bg-cover">
-      <div className="absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0">
+      <div className="bg-blue-800 w-[110vw] h-full absolute top-0 left-0 z-0 opacity-75" />
+      {/* <div className="absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0">
         <Image
           alt="hero"
           src="/bg-hero1.webp"
@@ -65,11 +66,11 @@ function HomeBanner() {
             image === 6 ? "opacity-100" : "opacity-0"
           } transition-all duration-1000`}
         />
-      </div>
+      </div> */}
       <div className="z-10 relative w-[650px] flex justify-center flex-col h-full gap-5 ml-20">
         <h1 className="text-white text-5xl leading-snug">
           Find the perfect&nbsp;
-          <i>freelance</i>
+          <b><i>FreeLance</i></b>
           <br />
           services for your business
         </h1>
@@ -79,13 +80,13 @@ function HomeBanner() {
             <input
               type="text"
               className="h-14 w-[450px] pl-10 rounded-md rounded-r-none"
-              placeholder={`Try "building mobile app"`}
+              placeholder={`Try "Building A Web App"`}
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
           </div>
           <button
-            className="bg-[#1DBF73] text-white px-12 text-lg font-semibold rounded-r-md"
+            className="bg-blue-400 text-white px-12 text-lg font-bold rounded-r-md hover:bg-amber-300 transition-all"
             onClick={() => router.push(`/search?q=${searchData}`)}
           >
             Search
@@ -118,10 +119,11 @@ function HomeBanner() {
             >
               AI Services
             </li>
+            
           </ul>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
